@@ -79,14 +79,14 @@ public:
 		return result;
 	}
 
-	double phase(const Complex c1){
+	double phase(){
 		double result;
-		result=atan2(Real,Imag);
+		result=atan2(this->Real,this->Imag);
 		return result;
 	}
 
-	Complex conj(const Complex c1){
-		return Complex(c1.Real,-c1.Imag);
+	Complex conj(){
+		return Complex(this->Real,-(this->Imag));
 	}
 
 };
