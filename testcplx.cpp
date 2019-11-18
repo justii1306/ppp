@@ -6,6 +6,8 @@ using namespace std;
 int main()
 {
   Complex a(0.0,15),b(0,13),c;
+  Complex r1(7.1,5.1);
+  Complex r2(8.1,-3.1);
   double p;
   c = 10;
   cout << c <<endl;
@@ -17,14 +19,14 @@ int main()
   c = 10 - a;
   (c -=b) -=10;
   cout << c <<endl;
-  c = a / b;
+  c = r1 / r2;
   cout << c << endl;
-  c = /a;
+  r1 /= r2;
+  cout << r1 << endl;
+  p = r1.abs();
+  cout << p << endl;
+  p= r1.phase();
+  cout << p << endl;
+  c = r1.conj();
   cout << c << endl;
-  p = abs(c);
-  cout << p << endl;
-  p=phase(c);
-  cout << p << endl;
-  p = conj(c);
-  cout << p << endl;
-
+}

@@ -62,9 +62,12 @@ public:
   };
 
   Complex & operator /=(Complex c2){
-	  Real = (Real*c2.Real+Imag*c2.Imag)/(c2.Real*c2.Real+c2.Imag*c2.Imag);
-	  Imag=(Imag*c2.Real-Real*c2.Imag)/(c2.Real*c2.Real+c2.Imag*c2.Imag);
-	  return *this;
+	  double r,i;
+          r = (Real*c2.Real+Imag*c2.Imag)/(c2.Real*c2.Real+c2.Imag*c2.Imag);
+	  i = (Imag*c2.Real-Real*c2.Imag)/(c2.Real*c2.Real+c2.Imag*c2.Imag);
+	  Real = r;
+          Imag = i;
+          return *this;
   }
 
   double abs(){
